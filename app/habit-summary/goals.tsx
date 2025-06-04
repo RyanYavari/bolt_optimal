@@ -9,7 +9,6 @@ import { colors } from '@/src/constants/colors';
 import { fonts } from '@/src/constants/fonts';
 
 export default function GoalsScreen() {
-  // Sample data for charts
   const progressData = [40, 45, 55, 60, 65, 70, 75];
   const consistencyData = [80, 65, 90, 85, 75, 95, 85];
 

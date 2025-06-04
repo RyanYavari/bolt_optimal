@@ -27,7 +27,6 @@ export default function HabitSummaryScreen() {
   const [todos, setTodos] = useState<TodoItem[]>([]);
 
   const generateTodos = (goal: string) => {
-    // Simple logic to break down goals into todos
     const words = goal.toLowerCase().split(' ');
     const newTodos: TodoItem[] = [];
 
@@ -47,7 +46,6 @@ export default function HabitSummaryScreen() {
       );
     }
 
-    // Add a general todo if no specific category is matched
     if (newTodos.length === 0) {
       newTodos.push(
         { id: (Date.now() + 6).toString(), text: `Start working on: ${goal}`, completed: false },
@@ -97,7 +95,7 @@ export default function HabitSummaryScreen() {
         <Animated.View entering={FadeInDown.duration(500).delay(200)}>
           <Card style={styles.todosCard}>
             <Text style={styles.todosTitle}>Action Items</Text>
-            {todos.map((todo, index) => (
+            {todos.map((todo) => (
               <TouchableOpacity
                 key={todo.id}
                 style={styles.todoItem}
